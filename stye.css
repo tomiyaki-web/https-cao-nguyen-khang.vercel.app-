@@ -1,0 +1,168 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #99ccff;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: #000;
+}
+
+.page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 50px 20px;
+  min-height: 100vh;
+}
+
+/* Logo */
+.logo {
+  width: 265px;
+  margin: 0 auto 30px;
+  border: 2px solid #000;
+  border-radius: 14px;
+  background: #00ffff;
+  box-shadow: 5px 5px 0 #666;
+  overflow: hidden;
+  text-align: center;
+}
+.logo span {
+  display: block;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 1.15;
+  padding: 4px 0;
+}
+.logo .top { background: #00ffff; border-bottom: 3px solid #000; }
+.logo .bottom { background: #00ffff; }
+
+h1 {
+  text-align: center;
+  font-size: 22px;
+  margin: 0 0 24px;
+}
+
+.intro {
+  text-align: center;
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.row > label:first-child,
+.row > .label {
+  width: 205px;
+  flex-shrink: 0;
+}
+.inline-label { margin: 0 6px 0 6px; }
+
+input[type="text"],
+select,
+textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  border: 1px solid #bbb;
+  background: #fff;
+  padding: 3px 4px;
+  height: 22px;
+}
+.w-name  { width: 105px; }
+.w-last  { width: 103px; }
+.w-wide  { width: 185px; }
+.w-city  { width: 130px; }
+.w-state { width: 36px; }
+.w-zip   { width: 62px; }
+.w-mid   { width: 130px; }
+
+select { height: 22px; padding: 1px 2px; width: 107px; }
+
+hr {
+  border: 0;
+  border-top: 1px solid #666;
+  margin: 18px 0 16px;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  column-gap: 0;
+  row-gap: 2px;
+  font-size: 15px;
+}
+.options label { display: flex; align-items: center; gap: 2px; white-space: nowrap; }
+.options input { margin: 0 4px 0 0; }
+
+.used-for { display: grid; grid-template-columns: 130px 1fr; }
+.used-for .opt-col { display: contents; }
+
+.fieldset-row { display: flex; align-items: flex-start; margin-bottom: 8px; font-size: 15px; }
+.fieldset-row > .label { flex: 0 0 205px; padding-top: 1px; padding-right: 10px; }
+
+.comments { display: flex; align-items: flex-start; margin: 4px 0 12px; font-size: 15px; }
+.comments .label { width: 205px; flex-shrink: 0; }
+textarea {
+  width: 312px;
+  height: 105px;
+  resize: none;
+  padding: 4px;
+}
+
+.buttons { text-align: center; margin-top: 8px; }
+button {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  padding: 2px 8px;
+  background: #efefef;
+  border: 1px solid #767676;
+  border-radius: 2px;
+  cursor: pointer;
+}
+button:hover { background: #e2e2e2; }
+
+/* Các ô "System" nằm trên cùng một dòng */
+.options.inline {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+}
+
+@media (max-width: 560px) {
+  .options.inline { flex-wrap: wrap; }
+  .page { padding: 16px 18px; }
+  .row, .fieldset-row, .comments { flex-wrap: wrap; }
+  .row > label:first-child, .row > .label,
+  .fieldset-row > .label, .comments .label { width: 100%; flex-basis: 100%; margin-bottom: 3px; }
+  textarea { width: 100%; }
+}
+
+/* Nút radio "Used for": viền ngoài xanh lá, giữa trắng, tâm xanh lá khi được chọn */
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  margin: 0 4px 0 0;
+  border: 1px solid #767676;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+input[type="radio"]:checked {
+  border: 2px solid #2e9e3e;
+  background: radial-gradient(circle, #2e9e3e 0 2.5px, #fff 3px);
+}
+
+/* Nhãn không xuống dòng, ví dụ "System (check all that apply):" */
+.row > .label,
+.fieldset-row > .label,
+.comments .label {
+  white-space: nowrap;
+}
