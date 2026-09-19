@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 8px;
   background: #ffffff;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "normal", Times, serif;
   font-size: 16px;
   color: #000;
 }
@@ -124,6 +124,8 @@ button {
   cursor: pointer;
 }
 button:hover { background: #e2e2e2; }
+
+/* Các ô "System": Windows, UNIX một hàng; Macintosh, Other hàng dưới */
 .options.inline {
   display: grid;
   grid-template-columns: 130px auto;
@@ -156,6 +158,7 @@ input[type="radio"]:checked {
   background: radial-gradient(circle, #2e9e3e 0 2.5px, #fff 3px);
 }
 
+/* Nhãn không xuống dòng, ví dụ "System (check all that apply):" */
 .row > .label,
 .fieldset-row > .label,
 .comments .label {
