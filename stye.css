@@ -125,15 +125,13 @@ button {
 }
 button:hover { background: #e2e2e2; }
 
-/* Các ô "System" nằm trên cùng một dòng */
 .options.inline {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: 130px auto;
+  row-gap: 2px;
 }
 
 @media (max-width: 560px) {
-  .options.inline { flex-wrap: wrap; }
   .page { padding: 16px 18px; }
   .row, .fieldset-row, .comments { flex-wrap: wrap; }
   .row > label:first-child, .row > .label,
@@ -141,7 +139,6 @@ button:hover { background: #e2e2e2; }
   textarea { width: 100%; }
 }
 
-/* Nút radio "Used for": viền ngoài xanh lá, giữa trắng, tâm xanh lá khi được chọn */
 input[type="radio"] {
   -webkit-appearance: none;
   appearance: none;
@@ -160,7 +157,6 @@ input[type="radio"]:checked {
   background: radial-gradient(circle, #2e9e3e 0 2.5px, #fff 3px);
 }
 
-/* Nhãn không xuống dòng, ví dụ "System (check all that apply):" */
 .row > .label,
 .fieldset-row > .label,
 .comments .label {
