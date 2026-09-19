@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jackson Electronics - Registration Form</title>
-<link rel="stylesheet" href="stye.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jackson Electronics - Registration Form</title>
+  <link rel="stylesheet" href="stye.css">
 </head>
 <body>
   <div class="page">
 
+    <!-- Logo -->
     <div class="logo">
-      <span class="top">Jackson</span>
-      <span class="bottom">Electronics</span>
+      <div class="logo-text">Jackson</div>
+      <hr>
+      <div class="logo-text">Electronics</div>
     </div>
 
     <h1>Registration Form</h1>
@@ -28,12 +30,12 @@
 
       <div class="row">
         <label for="addr1">Address #1:</label>
-        <input type="text" id="addr1" name="addr1" class="w-wide" style="width:185px">
+        <input type="text" id="addr1" name="addr1" class="w-wide">
       </div>
 
       <div class="row">
         <label for="addr2">Address #2:</label>
-        <input type="text" id="addr2" name="addr2" class="w-wide" style="width:185px">
+        <input type="text" id="addr2" name="addr2" class="w-wide">
       </div>
 
       <div class="row">
@@ -50,14 +52,12 @@
         <input type="text" id="country" name="country" class="w-mid" value="United States">
       </div>
 
-      <hr>
+      <hr class="divider">
 
       <div class="row">
         <label for="product">Product:</label>
         <select id="product" name="product">
           <option>ScanMaster</option>
-          <option>bài khó quá</option>
-          <option>em làm đau ###</option>
         </select>
       </div>
 
@@ -73,7 +73,7 @@
 
       <div class="fieldset-row">
         <span class="label">Used for:</span>
-        <div class="options" style="grid-template-columns:130px 150px;">
+        <div class="options used-for">
           <label><input type="radio" name="usedfor" value="home"> Home</label>
           <label><input type="radio" name="usedfor" value="edu"> Educational Institution</label>
           <label><input type="radio" name="usedfor" value="business" checked> Business</label>
@@ -83,8 +83,8 @@
       </div>
 
       <div class="fieldset-row">
-        <span class="label" style="width:168px">System (check all that apply):</span>
-        <div class="options inline">
+        <span class="label">System (check all that apply):</span>
+        <div class="options system">
           <label><input type="checkbox" name="sys" value="windows"> Windows</label>
           <label><input type="checkbox" name="sys" value="unix"> UNIX</label>
           <label><input type="checkbox" name="sys" value="mac"> Macintosh</label>
@@ -92,7 +92,7 @@
         </div>
       </div>
 
-      <hr>
+      <hr class="divider">
 
       <div class="comments">
         <label class="label" for="comments">Comments?:</label>
