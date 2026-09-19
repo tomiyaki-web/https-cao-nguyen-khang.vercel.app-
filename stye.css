@@ -2,8 +2,8 @@
 
 body {
   margin: 0;
-  padding: 0;
-  background: #99ccff;
+  padding: 8px;
+  background: #ffffff;
   font-family: "Times New Roman", Times, serif;
   font-size: 16px;
   color: #000;
@@ -13,7 +13,7 @@ body {
   max-width: 680px;
   margin: 0 auto;
   padding: 20px 50px 20px;
-  min-height: 100vh;
+  background: #99ccff;
 }
 
 /* Logo */
@@ -124,7 +124,6 @@ button {
   cursor: pointer;
 }
 button:hover { background: #e2e2e2; }
-
 .options.inline {
   display: grid;
   grid-template-columns: 130px auto;
