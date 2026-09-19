@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 8px;
   background: #ffffff;
-  font-family: "normal", Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 16px;
   color: #000;
 }
@@ -16,16 +16,23 @@ body {
   background: #99ccff;
 }
 
-/* Logo */
 .logo {
-  width: 265px;
+  width: 300px;
   margin: 0 auto 30px;
+  background: #00ffff;
   border: 2px solid #000;
   border-radius: 14px;
-  background: #00ffff;
   box-shadow: 5px 5px 0 #666;
   overflow: hidden;
   text-align: center;
+}
+ 
+.logo-text {
+  font-size: 100px;
+  font-weight: 800; /* Extra Bold */
+  letter-spacing: 9px; /* giãn chữ theo chiều ngang */
+  line-height: 1.2;
+  padding: 2px 0;
 }
 .logo span {
   display: block;
@@ -140,6 +147,7 @@ button:hover { background: #e2e2e2; }
   textarea { width: 100%; }
 }
 
+/* Nút radio "Used for": viền ngoài xanh lá, giữa trắng, tâm xanh lá khi được chọn */
 input[type="radio"] {
   -webkit-appearance: none;
   appearance: none;
