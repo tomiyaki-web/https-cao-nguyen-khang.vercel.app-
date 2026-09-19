@@ -1,174 +1,110 @@
-* { box-sizing: border-box; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jackson Electronics - Registration Form</title>
+<link rel="stylesheet" href="stye.css">
+</head>
+<body>
+  <div class="page">
 
-body {
-  margin: 0;
-  padding: 8px;
-  background: #ffffff;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
-  color: #000;
-}
+    <div class="logo">
+      <span class="top">Jackson</span>
+      <span class="bottom">Electronics</span>
+    </div>
 
-.page {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 20px 50px 20px;
-  background: #99ccff;
-}
+    <h1>Registration Form</h1>
+    <p class="intro">Register your Jackson Electronics product here</p>
 
-.logo {
-  width: 300px;
-  margin: 0 auto 30px;
-  background: #00ffff;
-  border: 2px solid #000;
-  border-radius: 14px;
-  box-shadow: 8px 8px 0 #999; 
-  overflow: hidden;
-  text-align: center;
-}
- 
-.logo-text {
-  font-size: 100px;
-  font-weight: 800; /* Extra Bold */
-  letter-spacing: 9px; /* giãn chữ theo chiều ngang */
-  line-height: 1.2;
-  padding: 2px 0;
-}
-.logo span {
-  display: block;
-  font-size: 30px;
-  font-weight: normal;
-  line-height: 1.15;
-  padding: 4px 0;
-}
-.logo .top { background: #00ffff; border-bottom: 3px solid #000; }
-.logo .bottom { background: #00ffff; }
+    <form action="#" method="post">
 
-h1 {
-  text-align: center;
-  font-size: 22px;
-  margin: 0 0 24px;
-}
+      <div class="row">
+        <label for="first">First Name:</label>
+        <input type="text" id="first" name="first" class="w-name">
+        <label class="inline-label" for="last">Last Name:</label>
+        <input type="text" id="last" name="last" class="w-last">
+      </div>
 
-.intro {
-  text-align: center;
-  font-size: 15px;
-  margin: 0 0 8px;
-}
+      <div class="row">
+        <label for="addr1">Address #1:</label>
+        <input type="text" id="addr1" name="addr1" class="w-wide" style="width:185px">
+      </div>
 
-.row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 8px;
-  font-size: 15px;
-}
-.row > label:first-child,
-.row > .label {
-  width: 205px;
-  flex-shrink: 0;
-}
-.inline-label { margin: 0 6px 0 6px; }
+      <div class="row">
+        <label for="addr2">Address #2:</label>
+        <input type="text" id="addr2" name="addr2" class="w-wide" style="width:185px">
+      </div>
 
-input[type="text"],
-select,
-textarea {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  border: 1px solid #bbb;
-  background: #fff;
-  padding: 3px 4px;
-  height: 22px;
-}
-.w-name  { width: 105px; }
-.w-last  { width: 103px; }
-.w-wide  { width: 185px; }
-.w-city  { width: 130px; }
-.w-state { width: 36px; }
-.w-zip   { width: 62px; }
-.w-mid   { width: 130px; }
+      <div class="row">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" class="w-city">
+        <label class="inline-label" for="state">State:</label>
+        <input type="text" id="state" name="state" class="w-state">
+        <label class="inline-label" for="zip">Zip:</label>
+        <input type="text" id="zip" name="zip" class="w-zip">
+      </div>
 
-select { height: 22px; padding: 1px 2px; width: 107px; }
+      <div class="row">
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" class="w-mid" value="United States">
+      </div>
 
-hr {
-  border: 0;
-  border-top: 1px solid #666;
-  margin: 18px 0 16px;
-}
+      <hr>
 
-.options {
-  display: grid;
-  grid-template-columns: 130px 1fr;
-  column-gap: 0;
-  row-gap: 2px;
-  font-size: 15px;
-}
-.options label { display: flex; align-items: center; gap: 2px; white-space: nowrap; }
-.options input { margin: 0 4px 0 0; }
+      <div class="row">
+        <label for="product">Product:</label>
+        <select id="product" name="product">
+          <option>ScanMaster</option>
+          <option>bài khó quá</option>
+          <option>em làm đau ###</option>
+        </select>
+      </div>
 
-.used-for { display: grid; grid-template-columns: 130px 1fr; }
-.used-for .opt-col { display: contents; }
+      <div class="row">
+        <label for="date">Date Purchased:</label>
+        <input type="text" id="date" name="date" class="w-mid">
+      </div>
 
-.fieldset-row { display: flex; align-items: flex-start; margin-bottom: 8px; font-size: 15px; }
-.fieldset-row > .label { flex: 0 0 205px; padding-top: 1px; padding-right: 10px; }
+      <div class="row">
+        <label for="serial">Serial #:</label>
+        <input type="text" id="serial" name="serial" class="w-mid">
+      </div>
 
-.comments { display: flex; align-items: flex-start; margin: 4px 0 12px; font-size: 15px; }
-.comments .label { width: 205px; flex-shrink: 0; }
-textarea {
-  width: 312px;
-  height: 105px;
-  resize: none;
-  padding: 4px;
-}
+      <div class="fieldset-row">
+        <span class="label">Used for:</span>
+        <div class="options" style="grid-template-columns:130px 150px;">
+          <label><input type="radio" name="usedfor" value="home"> Home</label>
+          <label><input type="radio" name="usedfor" value="edu"> Educational Institution</label>
+          <label><input type="radio" name="usedfor" value="business" checked> Business</label>
+          <label><input type="radio" name="usedfor" value="other"> Other</label>
+          <label><input type="radio" name="usedfor" value="gov"> Government</label>
+        </div>
+      </div>
 
-.buttons { text-align: center; margin-top: 8px; }
-button {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 14px;
-  padding: 2px 8px;
-  background: #efefef;
-  border: 1px solid #767676;
-  border-radius: 2px;
-  cursor: pointer;
-}
-button:hover { background: #e2e2e2; }
+      <div class="fieldset-row">
+        <span class="label" style="width:168px">System (check all that apply):</span>
+        <div class="options inline">
+          <label><input type="checkbox" name="sys" value="windows"> Windows</label>
+          <label><input type="checkbox" name="sys" value="unix"> UNIX</label>
+          <label><input type="checkbox" name="sys" value="mac"> Macintosh</label>
+          <label><input type="checkbox" name="sys" value="other"> Other</label>
+        </div>
+      </div>
 
-/* Các ô "System": Windows, UNIX một hàng; Macintosh, Other hàng dưới */
-.options.inline {
-  display: grid;
-  grid-template-columns: 130px auto;
-  row-gap: 2px;
-}
+      <hr>
 
-@media (max-width: 560px) {
-  .page { padding: 16px 18px; }
-  .row, .fieldset-row, .comments { flex-wrap: wrap; }
-  .row > label:first-child, .row > .label,
-  .fieldset-row > .label, .comments .label { width: 100%; flex-basis: 100%; margin-bottom: 3px; }
-  textarea { width: 100%; }
-}
+      <div class="comments">
+        <label class="label" for="comments">Comments?:</label>
+        <textarea id="comments" name="comments"></textarea>
+      </div>
 
-/* Nút radio "Used for": viền ngoài xanh lá, giữa trắng, tâm xanh lá khi được chọn */
-input[type="radio"] {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 13px;
-  height: 13px;
-  margin: 0 4px 0 0;
-  border: 1px solid #767676;
-  border-radius: 50%;
-  background: #fff;
-  cursor: pointer;
-  flex-shrink: 0;
-}
+      <div class="buttons">
+        <button type="submit">Click to register</button>
+        <button type="reset">Click to cancel</button>
+      </div>
 
-input[type="radio"]:checked {
-  border: 2px solid #2e9e3e;
-  background: radial-gradient(circle, #2e9e3e 0 2.5px, #fff 3px);
-}
-
-/* Nhãn không xuống dòng, ví dụ "System (check all that apply):" */
-.row > .label,
-.fieldset-row > .label,
-.comments .label {
-  white-space: nowrap;
-}
+    </form>
+  </div>
+</body>
+</html>
